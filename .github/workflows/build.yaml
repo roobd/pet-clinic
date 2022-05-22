@@ -53,4 +53,7 @@ jobs:
     - name: Release
       run: |
         #### AUFGABE 4 DEPLOYMENT AUF HEROKU
+        heroku container:login
+        heroku stack:set container --app ${APP_NAME}
+        heroku container:release web --app ${APP_NAME}
           # hier wird die 4. Aufgabe bearbeitet: Release der App auf Heroku
